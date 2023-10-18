@@ -1,12 +1,12 @@
 build:
-  erick:
+  carlosart17:
     image: okteto.dev/graphql-carlosart17:latest
 
 deploy:
   - okteto build # build the image with the latest code
   - kubectl apply -f manifests # create all the resources in kubernetes
 dev:
-  adsoftsito:
+  carlosart17:
     command: bash
     sync:
     - .:/hackernews
