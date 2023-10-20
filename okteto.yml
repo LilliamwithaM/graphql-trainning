@@ -1,6 +1,6 @@
 build:
-  carlosart17:
-    image: okteto.dev/graphql-carlosart17:latest
+  lilliamwitham:
+    image: okteto.dev/lilliamwitham:latest
 
 deploy:
   - okteto build # build the image with the latest code
