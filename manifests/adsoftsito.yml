@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lilliamwitham
+  name: graphql-lilliamwitham
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lilliamwitham
+      app: graphql-lilliamwitham
   template:
     metadata:
       labels:
-        app: lilliamwitham
+        app: graphql-lilliamwitham
     spec:
       containers:
-      - image: okteto.dev/lilliamwitham:latest
-        name: lilliamwitham
+      - image: okteto.dev/graphql-lilliamwitham:latest
+        name: graphql-lilliamwitham
         #envFrom:
         #- configMapRef:
         #    name: erick-config
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: lilliamwitham
+  name: graphql-lilliamwitham
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "lilliamwitham"
+  - name: "graphql-lilliamwitham"
     port: 8080
   selector:
-    app: lilliamwitham
+    app: graphql-lilliamwitham
